@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #menu{
+            width: 270px;
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            box-shadow:5px 5px 5px black;
+        }
+        body{
+            background-image: url('/static/LogoPrincipal.jpg');
+            background-size: 100%;
+        }
+    </style>
+    <script>
+        function loginFis(){
+            window.open('/loginFis','_parent');
+        }
+        function loginPas(){
+            window.open('/loginPas','_parent')
+        }
+    </script>
+</head>    
+<body>
+    <div class="card" id="menu">
+        <div class="card-header">Menu Principal</div>
+        <div class="card-body">
+            <button type="button" class="btn btn-primary" onclick="loginFis()">Fisioterapeuta</button>
+            <button type="button" class="btn btn-success" onclick="loginPas()">Paciente</button>
+        </div>
+        <div class="card-footer">Sistema de Fisioterapia en Casa</div>
+      </div>
+</body>
+</html>

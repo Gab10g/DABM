@@ -1,0 +1,34 @@
+1.Tendinitis de muñeca
+    +Flexión y extención de muñeca -> Ej1
+    +Giros Con la mano -> Ej2
+    +Estiramiento del flexor de la muñeca -> Ej3
+
+2.Tendinitis de hombro
+    +Ejercicios 1 -> Ej4   
+    +Ejercicios 2 -> Ej5
+    +Ejercicios 3 -> Ej6
+
+3.Dorsalgia
+    +Ejercicios 1 -> Ej7
+    +Ejercicios 2 -> Ej8
+    +Ejercicios 3 -> Ej9
+
+4.Cervicales
+    +Desbloqueo de homoplatos -> Ej10
+    +Rigidez del cuello -> Ej11
+    +Reduce Molestias -> Ej12
+
+5.Lumbalgia
+    +Rodillas flexionadas sobre el pecho -> Ej13
+    +Ejercicio de rotación externa de la cadera -> Ej14
+    +Balanceo Pelvico -> Ej15
+
+6.Artrosis de Rodilla
+    +Levantar la Pierna con Banda Elástica -> Ej16
+    +Puntuillas -> Ej17
+    +Levantar la pierna en dirección lateral. -> Ej18
+
+7.Fibromalgia
+    +Potenciación -> Ej19
+    +Cuadrupedia -> Ej20
+    +Deslordosante -> Ej21

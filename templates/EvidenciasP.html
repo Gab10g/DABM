@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencias</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='estilos.css') }}"> <!--importacion de archivo de estilos.css-->
+    <script>
+        
+        function boton(res){
+            Documento=document.getElementById("Doc").value;
+            if (Documento==""){
+                alert("Ingrese todos los valores");                
+            }
+            else{
+                document.getElementById("formConsulEvidencias").submit();                
+            }
+        }
+      
+    </script>
+    <style>
+        #login{
+            border-style: solid;
+            border-color: black;
+            border-width: thin;
+            padding: 10px;
+            width: 400px;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            left: 35%;
+            top: 15%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('/static/LogoPacientes.jpg')">
+    <div id="login">
+        <form action="/ConsultarEv" method="post" id="formConsulEvidencias">
+            <img alt="Logo Escuela" height="250" src="/static/Logo3.jpg" width="250">
+            <!-- <p class="parrafo">Usuario  : <input type="text" name="usuario" id="usuario"></p> -->
+            <p class="parrafo">Documento : <input type="text" name="Documento" id="Doc"></p>
+            <p><input type="button" class="boton" value="Ingresar" onclick="boton('{{res}}')"></p>
+        </form>
+    </div>
+</body>
+</html>

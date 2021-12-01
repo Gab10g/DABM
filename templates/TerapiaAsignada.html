@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso al sistema</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      #ejercicios{
+          width: 330px;
+          position: absolute;
+          left: 38%;
+          top: 50%;
+          box-shadow:5px 5px 5px black;
+      }
+  </style>
+    <script>
+        function Ej1(dato){
+          if(dato=='Tendinitis de Muneca'){
+            window.open('/Ej1','_parent');
+          }
+          if(dato=='Tendinitis de Hombro'){
+            window.open('/Ej4','_parent');
+          }
+          if(dato=='Dorsalgia'){
+            window.open('/Ej7','_parent');
+          }
+          if(dato=='Cervicales'){
+            window.open('/Ej10','_parent');
+          }
+          if(dato=='Lumbalgia'){
+            window.open('/Ej13','_parent');
+          }
+          if(dato=='Artrosis de Rodilla'){
+            window.open('/Ej16','_parent');
+          }
+          if(dato=='Fibromalgia'){
+            window.open('/Ej19','_parent');
+          }
+        }
+        function Ej2(dato){
+          if(dato=='Tendinitis de Muneca'){
+            window.open('/Ej2','_parent');
+          }
+          if(dato=='Tendinitis de Hombro'){
+            window.open('/Ej5','_parent');
+          }
+          if(dato=='Dorsalgia'){
+            window.open('/Ej8','_parent');
+          }
+          if(dato=='Cervicales'){
+            window.open('/Ej11','_parent');
+          }
+          if(dato=='Lumbalgia'){
+            window.open('/Ej14','_parent');
+          }
+          if(dato=='Artrosis de Rodilla'){
+            window.open('/Ej17','_parent');
+          }
+          if(dato=='Fibromalgia'){
+            window.open('/Ej20','_parent');
+          }
+        }
+        function Ej3(dato){
+          if(dato=='Tendinitis de Muneca'){
+            window.open('/Ej3','_parent');
+          }
+          if(dato=='Tendinitis de Hombro'){
+            window.open('/Ej6','_parent');
+          }
+          if(dato=='Dorsalgia'){
+            window.open('/Ej9','_parent');
+          }
+          if(dato=='Cervicales'){
+            window.open('/Ej12','_parent');
+          }
+          if(dato=='Lumbalgia'){
+            window.open('/Ej15','_parent');
+          }
+          if(dato=='Artrosis de Rodilla'){
+            window.open('/Ej18','_parent');
+          }
+          if(dato=='Fibromalgia'){
+            window.open('/Ej21','_parent');
+          }
+        }
+        function Evidencia(){
+            window.open('/Evidencia','_parent')
+        }
+        function Evolucion(){
+            window.open('/Evolucion','_parent');
+        }
+    </script>
+
+</head>
+<body style="background-image: url('/static/LogoPacientes.jpg')">
+    <main>
+    <div class="container">
+        <h1>Terapia Asignada</h1>
+        <form action="/GuardarPacientes" method="post" id="formLogin">
+          <div class="form-group">
+            <label for="Nombre paciente">Nombre paciente: {{name}}</label>
+          </div>
+          <div class="form-group">
+            <label for="Documento">Numero de Documento: {{doc}}</label>
+          </div>
+          <div class="form-group">
+            <label for="Pat">Patologia: {{pat}}</label>
+          </div>
+        </form>
+      </div>
+      <div class="card" id="ejercicios">
+        <div class="card-header">Ejercicios Asignados</div>
+        <div class="card-body">
+            <button type="button" class="btn btn-primary" onclick="Ej1('{{pat}}')">Ejercicio1</button>
+            <button type="button" class="btn btn-success" onclick="Ej2('{{pat}}')">Ejercicio2</button>
+            <button type="button" class="btn btn-warning" onclick="Ej3('{{pat}}')">Ejercicio3</button>
+        </div>
+      </div>
+    </main>  
+      
+</body>
+</html>
+

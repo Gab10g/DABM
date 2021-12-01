@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso al sistema</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+            function ValidarDatos(){
+            password1=document.getElementById("psw").value;
+            password2=document.getElementById("psw2").value;
+            NombreP=document.getElementById("Nombre paciente").value;
+            Documento=document.getElementById("Documento").value;
+
+            if ((NombreP=="") || (Documento=="")||(password1=="")||(password2=="")){
+                alert("Ingrese todos los valores");                
+            }
+            else{
+              if (password1==password2){
+                alert("Paciente Registrado")
+                document.getElementById("formLogin").submit();
+              }
+              else{
+                alert("Contraseña no coincide")
+            }     
+            }
+        }
+    </script>
+
+</head>
+<body style="background-image: url('/static/LogoPacientes.jpg')">
+    <main>
+    <div class="container">
+        <h1>Registro de Pacientes</h1>
+        <form action="/GuardarPacientes" method="post" id="formLogin">
+          <div class="form-group">
+            <label for="Nombre paciente">Nombres:</label>
+            <input type="text" class="form-control" id="Nombre paciente" placeholder="Ingrese Nombres del Paciente" name="NombrePaciente">
+          </div>
+          <div class="form-group">
+            <label for="Apellido paciente">Apellidos:</label>
+            <input type="text" class="form-control" id="Apellido paciente" placeholder="Ingrese Apellidos del Paciente" name="ApellidoPaciente">
+          </div>
+
+          <div class="form-group">
+            <label for="Documento">Numero de Documento:</label>
+            <input type="text" class="form-control" id="Documento" placeholder="Documento del Paciente" name="Doc">
+          </div>
+          <div class="form-group">
+            <label for="Pat">Patologia:</label>
+            <select name="Pat" id="Pat">
+            <option value="Tendinitis de Muneca">Tendinitis de Muneca</option> 
+            <option value="Tendinitis de Hombro">Tendinitis de Hombro</option> 
+            <option value="Dorsalgia">Dorsalgia</option>
+            <option value="Cervicales">Cervicales</option> 
+            <option value="Lumbalgia">Lumbalgia</option> 
+            <option value="Artrosis de Rodilla">Artrosis de Rodilla</option>
+            <option value="Fibromalgia">Fibromalgia</option>  
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="RH">Tipo de Sangre:</label>
+            <select name="RH" id="RH">
+            <option value="O+">O+</option> 
+            <option value="O-">O-</option> 
+            <option value="A+">A+</option>
+            <option value="A-">A-</option> 
+            <option value="B+">B+</option> 
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option> 
+            <option value="AB-">AB-</option>  
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" id="mail" name="email">
+            <div class="input-group-append">
+              <span class="input-group-text">@example.com</span>
+            </div>
+          </div>
+      
+          <div class="input-group mb-3">
+          <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+              </div>
+            <input type="text" class="form-control" placeholder="Usuario" id="usr" name="username">  
+          </div>
+  
+          <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="Contraseña" id="psw" name="password">
+              <input type="password" class="form-control" placeholder="Confirme su contraseña" id="psw2" name="password">
+            </div>
+         
+          <button type="button" class="btn btn-primary" onclick="ValidarDatos()">Registrar</button>
+        </form>
+      </div>
+    </main> 
+</body>
+</html>
+

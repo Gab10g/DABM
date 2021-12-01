@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paciente</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: url('/static/LogoPaginas.jpg');
+            background-size: 100%;
+        }
+        #menu{
+            width: 538px;
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            box-shadow:5px 5px 5px black;
+        }
+    </style>
+    <script>
+        
+        function TerapiaA(){
+            window.open('/TerapiaAsignada','_parent');
+        }
+        function Evidencia(){
+            window.open('/Evidencia','_parent')
+        }
+        function Evolucion(){
+            window.open('/Evolucion','_parent');
+        }
+    </script>
+</head>    
+<body style="background-image: url('/static/LogoPaginas.jpg')">
+    <div class="card" id="menu">
+        <div class="card-header">Menu Principal</div>
+        <div class="card-body">
+            <button type="button" class="btn btn-primary" onclick="TerapiaA()">Terapias Asignadas</button>
+            <button type="button" class="btn btn-success" onclick="Evidencia()">Enviar Evidencias</button>
+            <button type="button" class="btn btn-warning" onclick="Evolucion()">Consultar Evolución</button>
+        </div>
+        <div class="card-footer">Pacientes</div>
+      </div>
+</body>
+</html>

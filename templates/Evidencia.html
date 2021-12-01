@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso al sistema</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script>
+        function boton(){
+            NombreP=document.getElementById("Nombre paciente").value;
+            Documento=document.getElementById("Documento").value;
+            if ((NombreP=="") || (Documento=="")){
+                alert("Ingrese todos los valores");                
+            }
+            else{
+                document.getElementById("formLogin").submit();
+            }
+        }
+      
+    </script> -->
+
+</head>
+<body style="background-image: url('/static/LogoPacientes.jpg')">
+    <main>
+    <!--
+    <div id="login">
+        <form action="/menuFisioterapeuta" method="post" id="formLogin">
+            <img alt="Logo Escuela" height="147" src="https://escuelaing.s3.amazonaws.com/staging/images/logo-ecijg.width-380.png?AWSAccessKeyId=AKIAWFY3NGTFBJGCIWME&amp;Signature=C%2BBrM2TjbnUAse6%2FTkfIPKvgY98%3D&amp;Expires=1636470203" width="380">
+            
+            <p class="parrafo">Usuario  : <input type="text" name="usuario" id="usuario"></p>
+            <p class="parrafo">Contraseña : <input type="password" name="password" id="password"></p>
+            <p><input type="button" class="boton" value="Ingresar" onclick="boton()"></p>
+        </form>
+    </div>
+-->
+    <div class="container">
+        <h1>Registro de evidencias</h1>
+        <form action="/GuardarEvidencias" enctype="multipart/form-data" method="post" id="formEvidencias">
+          <!-- <div class="form-group">
+            <label for="Nombre paciente">Nombre paciente:</label>
+            <input type="text" class="form-control" id="Nombre paciente" placeholder="Ingrese Nombre del Paciente" name="NombrePaciente">
+          </div>-->
+          <div class="form-group">
+            <label for="Documento">Numero de Documento:</label>
+            <input type="text" class="form-control" id="Documento" placeholder="Ingrese su numero de Documento" name="Documento">
+          </div> 
+          <div class="form-group">
+            <label for="evd">Adjunte su Evidencia</label>
+            <input type="file" class="form-control" name="evidencia" id="evd"> 
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="Pat">Patologia:</label>
+            <select name="Pat" id="Pat">
+            <option value="1">Tendinitis de Muñeca</option> 
+            <option value="2">Tendinitis de Hombro</option> 
+            <option value="3">Dorsalgia</option>
+            <option value="4">Cervicales</option> 
+            <option value="5">Lumbalgia</option> 
+            <option value="6">Artrosis de Rodilla</option>
+            <option value="7">Artritis</option> 
+            <option value="8">Fibromalgia</option>  
+            </select> -->
+            <!--<input type="text" class="form-control" id="RH" placeholder="RH" name="RH">-->
+          <!-- </div>
+          <div class="form-group">
+            <label for="RH">Tipo de Sangre:</label>
+            <select name="RH" id="RH">
+            <option value="1">O+</option> 
+            <option value="2">O-</option> 
+            <option value="3">A+</option>
+            <option value="4">A-</option> 
+            <option value="5">B+</option> 
+            <option value="6">B-</option>
+            <option value="7">AB+</option> 
+            <option value="8">AB-</option>  
+            </select> -->
+            <!--<input type="text" class="form-control" id="RH" placeholder="RH" name="RH">-->
+          <!-- </div> -->
+          <button type="submit" class="btn btn-primary" >Guardar</button>
+        </form>
+      </div>
+    </main>  
+
+
+</body>
+</html>
+

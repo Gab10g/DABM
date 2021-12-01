@@ -1,0 +1,21 @@
+body{
+    background-color: lightblue;
+}
+#login{
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+    padding: 10px;
+    width: 400px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    text-align: center;
+}
+.boton{
+    background-color: yellow;
+}
+.parrafo{
+    font-size: 18px;
+}
