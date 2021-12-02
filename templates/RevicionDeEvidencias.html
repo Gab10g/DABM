@@ -1,17 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Evidencias </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+      *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.video1 {
+    width: 300px; 
+    height: 300px;
+    overflow: hidden;
+    margin-left: 600px;
+    margin-top: 10px; 
+}
+.video1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.container{
+    width: 100%; 
+    height: 100%;
+    object-fit: auto;
+    object-position: center;
+} 
+  </style>
 </head>
 <body>
+
     <main>
-        <section>
-            <video src="../static/evidencias/{{Doc}}.mp4" controls preload="auto"></video>
-        </section>
+        <div class="video1">
+            <video src="../static/evidencias/{{Doc}}.mp4" controls preload="auto" ></video>
+        </div>
+
+        <div class="container">
+            <form action="/GuardarEvolucion" method="post" >
+              <div>
+                <label for="Documento">Documento Del Paciente Consultado</label>
+                <input type="text" id="Documento" name="Doc">
+              </div>
+              <div class="form-group">
+                <label for="comment">Comentarios:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </main>
-        
 </body>
 </html>

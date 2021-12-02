@@ -176,6 +176,38 @@ def Evidencia():
 def Evolucion():
     return render_template('Evolucion.html')
 
+@app.route('/GuardarEvolucion',methods=["POST"])
+def GuardarEvolucion():
+    if request.method=="POST":
+        datos=request.form['text']
+        name=request.form['Doc']
+
+        directorio=os.path.dirname(__file__)        #se abre y lee el archivo de texto de "UsuariosPacientes.cvs"
+        nombrearchivo="bd/"+name+".csv"
+        ruta=os.path.join(directorio,nombrearchivo)
+
+        f=open(ruta,"w")
+        f.write(datos)
+        f.close()
+
+        return render_template('/menuFisioterapeuta.html')
+
+@app.route('/ConsultarEvolucion', methods=["POST"])
+def ConsultarEvolucion():
+      if request.method=="POST":
+        archivo=request.form['Documento']
+
+        directorio=os.path.dirname(__file__)        #se abre y lee el archivo de texto de "UsuariosPacientes.cvs"
+        nombrearchivo="bd/"+str(archivo)+".csv"
+        ruta=os.path.join(directorio,nombrearchivo)
+
+        f=open(ruta,"r")
+        lineas=f.readlines()
+        f.close
+        
+        return render_template('ConsultarEvolucion.html',lineas=lineas)
+   
+
 @app.route('/Ej1')
 def Ej1():
     return render_template('Ej1.html')
